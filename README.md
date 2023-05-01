@@ -19,3 +19,9 @@ docker build --tag=auth-server:latest .
 sudo docker-compose -f docker-compose.yml up
 
 
+### Run without docker
+
+mvn clean package
+
+java -jar target/NetGuard-0.0.1-SNAPSHOT.jar  
+

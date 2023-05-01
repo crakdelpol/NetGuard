@@ -1,0 +1,15 @@
+version: '2'
+services:
+  auth-server:
+    container_name: auth-server
+    build:
+      context: docker-auth-server
+      dockerfile: Dockerfile
+    image: auth-server:latest
+    ports:
+      - 8080:8080
+    networks:
+      - spring-cloud-network
+networks:
+  spring-cloud-network:
+    driver: bridge
